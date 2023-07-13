@@ -62,13 +62,11 @@
 		0074D8EF2A5D2762002A2944 /* Proudia Weather */ = {
 			isa = PBXGroup;
 			children = (
+				0074D90C2A5FE91B002A2944 /* View */,
 				0074D9062A5D43CC002A2944 /* Proudia-Weather-Info.plist */,
 				0074D9032A5D3867002A2944 /* ViewModel */,
 				0074D8FE2A5D367D002A2944 /* Model */,
 				0074D8F02A5D2762002A2944 /* Proudia_WeatherApp.swift */,
-				0074D8F22A5D2762002A2944 /* ContentView.swift */,
-				0074D9072A5D6B97002A2944 /* WeatherDetailView.swift */,
-				0074D9092A5D6E9F002A2944 /* WeatherDetailCell.swift */,
 				0074D8F42A5D2764002A2944 /* Assets.xcassets */,
 				0074D8F62A5D2764002A2944 /* Preview Content */,
 			);
@@ -98,6 +96,16 @@
 				0074D9042A5D3877002A2944 /* WeatherViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0074D90C2A5FE91B002A2944 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0074D8F22A5D2762002A2944 /* ContentView.swift */,
+				0074D9072A5D6B97002A2944 /* WeatherDetailView.swift */,
+				0074D9092A5D6E9F002A2944 /* WeatherDetailCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

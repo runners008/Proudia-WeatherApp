@@ -63,7 +63,7 @@ struct ContentView: View {
                         Button {
                             self.isSheetOpened = true
                         } label: {
-                            Text("Click for more information")
+                            Text("Click for hourly forecast.")
                         }
                         
                         

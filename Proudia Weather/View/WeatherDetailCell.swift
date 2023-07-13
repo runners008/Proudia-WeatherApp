@@ -46,7 +46,7 @@ struct WeatherDetailCell: View {
         let newDateFormat = DateFormatter()
         
         oldDateFormat.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        newDateFormat.dateFormat = "h a dd MMM"
+        newDateFormat.dateFormat = "dd MMM h a"
         
         let newDate = oldDateFormat.date(from: date)
         let formattedDate = newDateFormat.string(from: newDate ?? Date())

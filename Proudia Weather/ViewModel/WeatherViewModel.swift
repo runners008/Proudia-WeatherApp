@@ -12,7 +12,6 @@ class WeatherViewModel: ObservableObject {
     
     private let baseUrl = "http://api.openweathermap.org/data/2.5/forecast?id=524901"
     private let apiKey = "aa9f3f3d993a70cb4504ea66a83c5a27"
-//    http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=aa9f3f3d993a70cb4504ea66a83c5a27&q=bangkok&units=metric
     
     init() {
         let request = WeatherModel.Request(city: "bangkok", unit: "metric")
@@ -20,8 +19,8 @@ class WeatherViewModel: ObservableObject {
     }
     
     func fetchCurrentWeather(request: WeatherModel.Request) {
-        let city = request.city.isEmpty ? weatherResponse?.cityName : request.city
-        
+//        let city = request.city.isEmpty ? weatherResponse?.cityName : request.city
+        let city = verifyCityName(name: request.city) ?? weatherResponse?.cityName
         let urlString = "\(baseUrl)&appid=\(apiKey)&q=\(city ?? "")&units=\(request.unit)"
         print(urlString)
         let session = URLSession.shared
@@ -86,6 +85,13 @@ class WeatherViewModel: ObservableObject {
         
     }
     
+    private func verifyCityName(name: String) -> String? {
+        if name.isEmpty { return nil }
+        let trimName = name.trimmingCharacters(in: .whitespaces)
+        let replacedString = trimName.replacingOccurrences(of: " ", with: "%20")
+        return replacedString
+    }
+    
     private func getConditionName(conditionId: Int) -> String {
         switch conditionId {
         case 200...232:
@@ -109,14 +115,16 @@ class WeatherViewModel: ObservableObject {
     
     private func getBackGroundColor(conditionId: Int) -> Color {
         switch conditionId {
-        case 200...232, 300...321, 500...531, 801...804:
-            return Color(red: 0.565, green: 0.6, blue: 0.631)
+        case 200...232, 300...321, 500...531:
+            return Color(red: 0.392, green: 0.584, blue: 0.929)
         case 600...622, 701...781:
             return Color(red: 0.725, green: 0.75, blue: 0.769)
         case 800:
-            return Color(red: 0.467, green: 0.733, blue: 0.831)
+            return Color(red: 1.000, green: 0.843, blue: 0)
+        case 801...804:
+            return Color(red: 0.827, green: 0.827, blue: 0.827)
         default:
-            return Color(red: 0.565, green: 0.6, blue: 0.631)
+            return Color(red: 0.827, green: 0.827, blue: 0.827)
         }
     }
     
