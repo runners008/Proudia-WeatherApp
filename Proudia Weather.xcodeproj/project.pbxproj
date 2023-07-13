@@ -11,6 +11,11 @@
 		0074D8F32A5D2762002A2944 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0074D8F22A5D2762002A2944 /* ContentView.swift */; };
 		0074D8F52A5D2764002A2944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0074D8F42A5D2764002A2944 /* Assets.xcassets */; };
 		0074D8F82A5D2764002A2944 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0074D8F72A5D2764002A2944 /* Preview Assets.xcassets */; };
+		0074D9002A5D3692002A2944 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0074D8FF2A5D3692002A2944 /* WeatherModel.swift */; };
+		0074D9022A5D3725002A2944 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0074D9012A5D3725002A2944 /* WeatherData.swift */; };
+		0074D9052A5D3877002A2944 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0074D9042A5D3877002A2944 /* WeatherViewModel.swift */; };
+		0074D9082A5D6B97002A2944 /* WeatherDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0074D9072A5D6B97002A2944 /* WeatherDetailView.swift */; };
+		0074D90A2A5D6E9F002A2944 /* WeatherDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0074D9092A5D6E9F002A2944 /* WeatherDetailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,12 @@
 		0074D8F22A5D2762002A2944 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0074D8F42A5D2764002A2944 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0074D8F72A5D2764002A2944 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0074D8FF2A5D3692002A2944 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		0074D9012A5D3725002A2944 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		0074D9042A5D3877002A2944 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		0074D9062A5D43CC002A2944 /* Proudia-Weather-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Proudia-Weather-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0074D9072A5D6B97002A2944 /* WeatherDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailView.swift; sourceTree = "<group>"; };
+		0074D9092A5D6E9F002A2944 /* WeatherDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +62,13 @@
 		0074D8EF2A5D2762002A2944 /* Proudia Weather */ = {
 			isa = PBXGroup;
 			children = (
+				0074D9062A5D43CC002A2944 /* Proudia-Weather-Info.plist */,
+				0074D9032A5D3867002A2944 /* ViewModel */,
+				0074D8FE2A5D367D002A2944 /* Model */,
 				0074D8F02A5D2762002A2944 /* Proudia_WeatherApp.swift */,
 				0074D8F22A5D2762002A2944 /* ContentView.swift */,
+				0074D9072A5D6B97002A2944 /* WeatherDetailView.swift */,
+				0074D9092A5D6E9F002A2944 /* WeatherDetailCell.swift */,
 				0074D8F42A5D2764002A2944 /* Assets.xcassets */,
 				0074D8F62A5D2764002A2944 /* Preview Content */,
 			);
@@ -65,6 +81,23 @@
 				0074D8F72A5D2764002A2944 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0074D8FE2A5D367D002A2944 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0074D8FF2A5D3692002A2944 /* WeatherModel.swift */,
+				0074D9012A5D3725002A2944 /* WeatherData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0074D9032A5D3867002A2944 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0074D9042A5D3877002A2944 /* WeatherViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0074D9082A5D6B97002A2944 /* WeatherDetailView.swift in Sources */,
+				0074D9052A5D3877002A2944 /* WeatherViewModel.swift in Sources */,
+				0074D90A2A5D6E9F002A2944 /* WeatherDetailCell.swift in Sources */,
 				0074D8F32A5D2762002A2944 /* ContentView.swift in Sources */,
+				0074D9002A5D3692002A2944 /* WeatherModel.swift in Sources */,
+				0074D9022A5D3725002A2944 /* WeatherData.swift in Sources */,
 				0074D8F12A5D2762002A2944 /* Proudia_WeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +308,7 @@
 				DEVELOPMENT_TEAM = GP32K6BNMC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Proudia-Weather-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -299,7 +337,7 @@
 				DEVELOPMENT_TEAM = GP32K6BNMC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Proudia-Weather-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
