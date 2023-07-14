@@ -48,3 +48,9 @@ The app utilizes the API services provided by openweathermap.org to retrieve wea
 - API for retrieving weather information: http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={apikey}&q={cityName}&units={temperatureUnit}
 
 Feel free to explore the app, check the weather for different cities, and stay informed about the current and forecasted weather conditions.
+
+# Reccomendation
+- Animated Background will make the app feels more interesting and beautiful to use.
+- Provide more information such as the chance of rain, pressure, wind speed and direction.
+- Allow to save the favorite cities.
+- Make response data more informative such as representing the temperature of the day by using graphs.
