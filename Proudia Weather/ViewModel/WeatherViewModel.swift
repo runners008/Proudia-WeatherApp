@@ -11,7 +11,7 @@ class WeatherViewModel: ObservableObject {
     @Published var weatherResponse: WeatherModel.Response?
     
     private let baseUrl = "http://api.openweathermap.org/data/2.5/forecast?id=524901"
-    private let apiKey = "aa9f3f3d993a70cb4504ea66a83c5a27"
+    private let apiKey = ProcessInfo.processInfo.environment["WEATHER_API_KEY"] ?? ""
     
     init() {
         let request = WeatherModel.Request(city: "bangkok", unit: "metric")
@@ -19,10 +19,8 @@ class WeatherViewModel: ObservableObject {
     }
     
     func fetchCurrentWeather(request: WeatherModel.Request) {
-//        let city = request.city.isEmpty ? weatherResponse?.cityName : request.city
         let city = verifyCityName(name: request.city) ?? weatherResponse?.cityName
         let urlString = "\(baseUrl)&appid=\(apiKey)&q=\(city ?? "")&units=\(request.unit)"
-        print(urlString)
         let session = URLSession.shared
         let url = URL(string: urlString)!
             
